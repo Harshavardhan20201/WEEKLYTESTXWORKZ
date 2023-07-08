@@ -1,0 +1,182 @@
+APTITUDE.
+_____________________________
+
+1. a. Maternal uncle
+2. b. Father in law
+3. d. Cannot be determined
+4. d. Father
+5. c. Grandson
+6. c. X + Y * A
+7. c. R
+8. c. Sister in law
+9. a. Father
+10. c. S
+11. a.10Km
+12. b.South
+13. a. Sout-west
+14. b. South-east
+_______________________________
+
+JAVA
+_______________________________
+
+1. True
+2. 10, 110
+3. Error cz if(x) is a boolean and datatype of x is int. if we ignore datatype the answer is "True"
+
+4. cz there will be no object will exist when the java runtime begins.To load class into memory and call main method by JVM the main method shud be static. If the main method is non static jvm cant call it since no object of class is present.
+
+5. class file.
+____________________________
+
+   public class Reverse{
+    public void reverseArray(int[] array){
+        for (int i =array.length-1;i>=0;i--){
+            System.out.println(array[i] + " ");
+        }
+    }
+}
+
+object or driver code
+_____________________________
+
+import java.util.Arrays;
+
+public class ReverseRunner {
+    public static void main(String[] args) {
+        Reverse runner1 = new Reverse();
+        int[] number = {10,45,7,9,2};
+        int []number1 = {2,9,7,45,10};
+        runner1.reverseArray(number1);
+        runner1.reverseArray(number);
+        System.out.println(Arrays.toString(number1));
+        System.out.println(Arrays.toString(number));
+    }
+}
+___________________________________________________
+
+6.
+arrange the array elements in descending order and remove duplicates.
+
+class file.
+______________________________________________________________
+
+public class ArrangeDescAndRemoveDuplicate {
+    public void sort(int[] array){
+        for(var i = 0; i < array.length;i++) {
+            for (var j = 1; j < array.length; j++)
+                if (array[j] > array[j - 1])
+                    swap(array, j, j - 1);
+        }
+    }
+    private void swap(int[] array, int index1, int index2){
+        var temp = array[index1];
+        array[index1] = array[index2];
+        array[index2] = temp;
+    }
+}
+
+driver code
+___________________________________
+
+import java.util.Arrays;
+
+public class Runner {
+    public static void main(String[] args) {
+        ArrangeDescAndRemoveDuplicate runner1 = new ArrangeDescAndRemoveDuplicate();
+        int[] array = {2,5,4,8,2,3,6,2};
+        int[] array1 = {8,6,5,4,3,2,1};
+        runner1.sort(array1);
+        runner1.sort(array);
+        System.out.println(Arrays.toString(array1));
+        System.out.println(Arrays.toString(array));
+    }
+}
+_____________________________________________________
+
+7. Done
+_____________________________________________________
+
+8. this - is a reference to current object.
+   this() - is used to call constructor from the other of the same class.
+_____________________________________________________
+
+9. 
+
+import java.io.*;
+class SwapTwoNumbers
+    public static void main(String args[])
+    {
+        int x = 6
+        int y = 5;
+        x = x + y;
+        y = x - y;
+        x = x - y;
+        System.out.println(x = " + x + ", y = " + y);
+    }
+}
+___________________________________________________
+
+10.
+a.
+
+import java.util.Scanner;
+
+public class Pattern{
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int rows = scanner.nextInt();
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < rows - i - 1; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j < 2 * i + 1; j++) {
+                System.out.print("&");
+            }
+            System.out.println();
+        }
+    }
+}
+__________________________________________________________
+
+b.
+
+public class Pattern{
+    public static void main(String[] args) {
+        int size = 3;
+
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                if (i == 1 && j == 1) {
+                    System.out.print(" ");
+                } else {
+                    System.out.print("% ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+____________________________________________________________
+c.
+
+public class Pattern{
+    public static void main(String[] args) {
+        int size = 3;
+
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                if (i == 1 && j == 1) {
+                    System.out.print("  ");
+                } else {
+                    System.out.print("% ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+______________________________________________________________
+
+
